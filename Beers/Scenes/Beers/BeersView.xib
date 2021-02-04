@@ -11,28 +11,36 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BeersViewController" customModule="Beers" customModuleProvider="target">
             <connections>
-                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="beersCollection" destination="avq-NZ-UWZ" id="xEl-YY-RbU"/>
+                <outlet property="view" destination="eK9-kO-XTX" id="jLW-2N-KDg"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" restorationIdentifier="BeersView" id="i5M-Pr-FkT">
+        <view contentMode="scaleToFill" restorationIdentifier="BeersView" id="eK9-kO-XTX">
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Beers View" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0QS-PK-CrN">
-                    <rect key="frame" x="164.5" y="437.5" width="85" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="avq-NZ-UWZ" userLabel="BeersCollection">
+                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="S7d-Sw-Tdj">
+                        <size key="itemSize" width="189" height="338"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                    <cells/>
+                </collectionView>
             </subviews>
-            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <viewLayoutGuide key="safeArea" id="vE4-tm-kND"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="0QS-PK-CrN" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="HnL-gO-vt2"/>
-                <constraint firstItem="0QS-PK-CrN" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="aYb-1j-A8Y"/>
+                <constraint firstItem="avq-NZ-UWZ" firstAttribute="leading" secondItem="vE4-tm-kND" secondAttribute="leading" id="5Qb-6S-Gql"/>
+                <constraint firstItem="vE4-tm-kND" firstAttribute="bottom" secondItem="avq-NZ-UWZ" secondAttribute="bottom" id="5d8-oA-33I"/>
+                <constraint firstItem="avq-NZ-UWZ" firstAttribute="top" secondItem="vE4-tm-kND" secondAttribute="top" id="XUw-Ri-Chg"/>
+                <constraint firstItem="vE4-tm-kND" firstAttribute="trailing" secondItem="avq-NZ-UWZ" secondAttribute="trailing" id="hfL-lu-UDG"/>
             </constraints>
-            <point key="canvasLocation" x="132" y="123"/>
+            <point key="canvasLocation" x="-87" y="-522"/>
         </view>
     </objects>
     <resources>

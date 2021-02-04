@@ -1,0 +1,23 @@
+
+
+"FavoritesTitle" = "Favoritos";
+"BeersTitle" = "Personajes";
+"DetailsTitle" = "Detalles";
+"SearchByFoodBarTitle" = "Buscar por Food";
+"BeerNameLabelText" = "Nombre";
+"BeerDescriptionLabelText" = "Descripción";
+"AddToFavoritesLabel" = "Agregar a";
+"RemoveFromFavoritesLabel" = "Eliminar de";
+"NoNameAvailableText" = "No disponible";
+"NoDescriptionAvailableText" = "No disponible";
+"NoMoreDataAvailable" = "No existen más datos";
+"NoDataAvailable" = "No existen datos disponibles";
+"UndefinedError" = "Error desconocido. Por favor, contactar al @developer.";
+"FetcherInternalError" = "No se han podido obtener los datos solicitados desde Marvel.";
+"RealmInternalError" = "No se han podido obtener los datos solicitados desde el almacenamiento interno.";
+"AddToFavoritesRequestError" = "No se ha podido agregar a favoritos.";
+"RemoveFromFavoritesRequestError" = "No se ha podido remover de favoritos.";
+"NoBeerDataAvailableError" = "No se pudieron obtener los datos solicitados de las cervezas.";
+"NoFavoriteDataAvailableError" = "No se pudieron obtener los datos solicitados de los Favoritos.";
+"Beer" = "Cerveza";
+"Picture" = "Imagen";

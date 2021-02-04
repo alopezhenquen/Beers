@@ -1,0 +1,23 @@
+
+
+"FavoritesTitle" = "Favorites";
+"BeersTitle" = "Beers";
+"DetailsTitle" = "Details";
+"SearchByFoodBarTitle" = "Search by Food";
+"BeerNameLabelText" = "Name";
+"BeerDescriptionLabelText" = "Description";
+"AddToFavoritesLabel" = "Add to";
+"RemoveFromFavoritesLabel" = "Remove from";
+"NoNameAvailableText" = "No name available";
+"NoDescriptionAvailableText" = "No description available";
+"NoMoreDataAvailable" = "No More Data Available";
+"NoDataAvailable" = "No Data Available";
+"UndefinedError" = "Undefined error. Please contact @developer.";
+"FetcherInternalError" = "Internal Error. The requested data could not be obtained from Marvel.";
+"RealmInternalError" = "Internal Error. The requested data could not be obtained from local Storage.";
+"AddToFavoritesRequestError" = "Could not be added to favorites.";
+"RemoveFromFavoritesRequestError" = "Could not be removed from favorites.";
+"NoBeerDataAvailableError" = "The requested data from Beers could not be obtained.";
+"NoFavoriteDataAvailableError" = "The requested data from Favorites could not be obtained.";
+"Beer" = "Beer";
+"Picture" = "Picture";
