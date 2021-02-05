@@ -1,21 +1,14 @@
-//
-//  BeerDetailsViewController.swift
-//  Beers
-//
-//  Created by Kill3r on 5/2/21.
-//  
-//
+
 
 import UIKit
-import FaveButton
 
 class BeerDetailsViewController: UIViewController {
 
     // MARK: Properties
     var presenter: ViewToBeerDetailsPresenterProtocol?
     var beerImagesRepo: BeerImagesRepo?
-    var isFavorite = false
     
+    // MARK: Outlets
     @IBOutlet weak var beerImage: UIImageView!
     @IBOutlet weak var beerNameLabel: UILabel!
     @IBOutlet weak var beerName: UILabel!
@@ -27,13 +20,11 @@ class BeerDetailsViewController: UIViewController {
     @IBOutlet weak var descriptionText: UITextView!
     @IBOutlet weak var foodPairingLabel: UILabel!
     @IBOutlet weak var foodPairingText: UITextView!
-    @IBOutlet weak var favoritesLabel: UILabel!
-    @IBOutlet weak var favoritesButton: FaveButton!
     @IBOutlet weak var scrollView: UIScrollView!
     
     
+    // MARK: Methods
     
-    // MARK: Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         setupViews()
@@ -43,8 +34,8 @@ class BeerDetailsViewController: UIViewController {
         presenter?.viewWillAppear()
     }
     
-    func setupViews(){
-        // TODO Setup Views.
+    func setupViews() {
+        
         beerNameLabel.accessibilityIdentifier = "beerNameLabel"
         beerNameLabel.setTextAndAccessibilityValue(with: NSLocalizedString("BeerNameLabelText", comment: ""))
         
@@ -76,8 +67,7 @@ class BeerDetailsViewController: UIViewController {
         foodPairingText.setTextAndAccessibilityValue(with: "")
         
         scrollView.accessibilityIdentifier = "beerDetailsScrollView"
-        favoritesLabel.accessibilityIdentifier = "favoritesLabel"
-        favoritesButton.accessibilityIdentifier = "favoritesButton"
+        
         beerImage.accessibilityIdentifier = "beerImage"
         beerImage.contentMode = .scaleAspectFit
         
@@ -94,6 +84,8 @@ class BeerDetailsViewController: UIViewController {
     }
 }
 
+
+
 extension BeerDetailsViewController: PresenterToBeerDetailsViewProtocol {
     
     //MARK: Methods
@@ -102,9 +94,8 @@ extension BeerDetailsViewController: PresenterToBeerDetailsViewProtocol {
         self.showErrorAlert(with: error)
     }
     
-    func showBeerDetails(beer: Beer, isFavorite: Bool) {
+    func showBeerDetails(with beer: Beer) {
         
-        // Setup Labels
         if let _name = beer.name, !_name.isEmpty {
             beerName.setTextAndAccessibilityValue(with: _name)
         } else {
@@ -139,17 +130,6 @@ extension BeerDetailsViewController: PresenterToBeerDetailsViewProtocol {
             foodPairingText.setTextAndAccessibilityValue(with: NSLocalizedString("NoFoodPairingAvailableText", comment: ""))
         }
         
-        // Setup Image
         self.beerImagesRepo?.fetchImage(from: beer.imageUrl, to: beerImage)
-        
-        // Setup Favorites Button
-//        self.isFavorite = isFavorite
-//        if isFavorite {
-//            addToFavoritesLabel.setTextAndAccessibilityValue(with: NSLocalizedString("RemoveFromFavoritesLabel", comment: ""))
-//            addToFavoritesButton.isSelected = true
-//        } else {
-//            addToFavoritesLabel.setTextAndAccessibilityValue(with: NSLocalizedString("AddToFavoritesLabel", comment: ""))
-//            addToFavoritesButton.isSelected = false
-//        }
     }
 }

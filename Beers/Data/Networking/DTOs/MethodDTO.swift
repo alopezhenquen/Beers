@@ -1,6 +1,6 @@
 
-
 import Foundation
+
 struct MethodDTO : Codable {
 	let mashTemp : [MashTempDTO]?
 	let fermentation : FermentationDTO?

@@ -1,6 +1,6 @@
 
-
 import Foundation
+
 struct MashTempDTO : Codable {
 	let temp : TempDTO?
 	let duration : Int?

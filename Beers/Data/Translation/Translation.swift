@@ -1,5 +1,4 @@
 
-
 import Foundation
 
 class Translation {
@@ -19,10 +18,5 @@ class Translation {
     fileprivate func translate(from: String?) -> URL? {
         guard let from = from, !from.isEmpty else { return nil }
         return URL.init(string: "\(from)")
-    }
-    
-    fileprivate func translate(from: URL?) -> String? {
-        guard let from = from else { return nil }
-        return from.absoluteString
     }
 }

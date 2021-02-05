@@ -1,10 +1,4 @@
-//
-//  BeersProtocols.swift
-//  Beers
-//
-//  Created by Kill3r on 4/2/21.
-//  
-//
+
 
 import Foundation
 
@@ -16,7 +10,7 @@ protocol PresenterToBeersViewProtocol: class {
     func onFetchCompleted(with beers: [Beer])
     func onNewFetchCompleted(with beers: [Beer])
     func showNoData()
-    func showError(error: Error?)
+    func showError(error: Error)
     func noMoreDataAvailable()
 }
 

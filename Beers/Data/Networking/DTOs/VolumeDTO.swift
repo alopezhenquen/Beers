@@ -1,6 +1,6 @@
 
-
 import Foundation
+
 struct VolumeDTO : Codable {
 	let value : Int?
 	let unit : String?

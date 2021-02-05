@@ -1,9 +1,4 @@
-//
-//  UITextView+Extensions.swift
-//  MarvelCharactersExample
-//
-//  Created by Kill3r on 29/1/21.
-//
+
 
 import UIKit
 

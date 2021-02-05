@@ -1,6 +1,6 @@
 
-
 import Foundation
+
 struct BeerDTO : Codable {
 	let id : Int?
 	let name : String?

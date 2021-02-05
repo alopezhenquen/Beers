@@ -1,9 +1,4 @@
-//
-//  NavigationBuilder.swift
-//  MarvelCharactersExample
-//
-//  Created by Kill3r on 14/1/21.
-//
+
 
 import UIKit
 
@@ -19,8 +14,7 @@ class DefaultNavigationBuilder: NavigationBuilder {
     }
     
     func setupNavigationView (navigationController: UINavigationController) -> UINavigationController {
-        // TODO Setup Navigation
-        // navigationController.navigationBar.tintColor = UIColor.init(named: "default-tint-color")
+        navigationController.navigationBar.tintColor = UIColor.init(named: "navigationBar.tintColor")
         return navigationController
     }
 }

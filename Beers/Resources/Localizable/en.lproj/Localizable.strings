@@ -1,21 +1,22 @@
 
 
-"FavoritesTitle" = "Favorites";
+// Beers Module
 "BeersTitle" = "Beers";
-"DetailsTitle" = "Details";
-
-
 "SearchByFoodBarTitle" = "Search by Food Pairing ..";
 
+"NoDataAvailable" = "No Data Available";
+"NoMoreDataAvailable" = "No More Data Available";
+
+
+
+// Beer Details Module
+"DetailsTitle" = "Details";
 
 "BeerNameLabelText" = "Name";
 "BeerDescriptionLabelText" = "Description";
 "BeerTagsLabelText" = "Tags";
 "BrewedLabelText" = "Brewed";
 "FoodPairingLabelText" = "Food Pairing";
-"AddToFavoritesLabel" = "Add to";
-"RemoveFromFavoritesLabel" = "Remove from";
-
 
 "NoNameAvailableText" = "No name available";
 "NoDescriptionAvailableText" = "No description available";
@@ -24,16 +25,6 @@
 "NoFoodPairingAvailableText" = "No food pairing data available";
 
 
-"NoDataAvailable" = "No Data Available";
-"NoMoreDataAvailable" = "No More Data Available";
-
-
-"UndefinedError" = "Undefined error. Please contact @developer.";
-"FetcherInternalError" = "Internal Error. The requested data could not be obtained from Punk API.";
-"RealmInternalError" = "Internal Error. The requested data could not be obtained from local Storage.";
-"AddToFavoritesRequestError" = "Could not be added to favorites.";
-"RemoveFromFavoritesRequestError" = "Could not be removed from favorites.";
-"NoBeerDataAvailableError" = "The requested data from Beers could not be obtained.";
-"NoFavoriteDataAvailableError" = "The requested data from Favorites could not be obtained.";
-"Beer" = "Beer";
-"Picture" = "Picture";
+// Errors
+"NoBeersDataError" = "Beers data could not be obtained.";
+"FetcherInternalError" = "Fetcher Internal Error.";

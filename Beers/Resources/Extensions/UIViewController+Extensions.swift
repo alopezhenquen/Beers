@@ -8,15 +8,7 @@
 import UIKit
 
 extension UIViewController {
-    func showErrorAlert(with error: Error?){
-        guard let error = error else {
-            let errorAlert = UIAlertController.init(
-                title: "Error",
-                message: NSLocalizedString("UndefinedError", comment: ""),
-                preferredStyle: .alert)
-            errorAlert.present(self, animated: true, completion: nil)
-            return
-        }
+    func showErrorAlert(with error: Error){
         let errorAlert = UIAlertController.init(
             title: "Error",
             message: error.localizedDescription,

@@ -1,6 +1,6 @@
 
-
 import Foundation
+
 struct FermentationDTO : Codable {
 	let temp : TempDTO?
 

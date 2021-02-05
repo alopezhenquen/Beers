@@ -1,10 +1,4 @@
-//
-//  BeersViewController.swift
-//  Beers
-//
-//  Created by Kill3r on 4/2/21.
-//  
-//
+
 
 import UIKit
 
@@ -31,7 +25,8 @@ class BeersViewController: UIViewController {
     fileprivate var moreDataAvailable = true
     
 
-    // MARK: Lifecycle
+    //MARK: Methods
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupViews()
@@ -74,8 +69,8 @@ class BeersViewController: UIViewController {
     }
     
     func checkEndOfPage(at cellIndex: Int) {
-        if (cellIndex == (beersList.count - 1) && !isLoading) {
-            // Ask Presenter for Next Page of Beers
+        if (cellIndex == (beersList.count - 1) && !isLoading && moreDataAvailable) {
+            // Ask Presenter for more Beers
             isLoading = true
             presenter?.fetchMoreBeers()
         }
@@ -117,7 +112,7 @@ extension BeersViewController: PresenterToBeersViewProtocol {
         loadingView?.showMessage(message: NSLocalizedString("NoDataAvailable", comment: ""))
     }
     
-    func showError(error: Error?) {
+    func showError(error: Error) {
         self.showErrorAlert(with: error)
     }
     

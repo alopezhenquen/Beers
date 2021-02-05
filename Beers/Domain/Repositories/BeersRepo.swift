@@ -1,5 +1,4 @@
 
-
 import Foundation
 
 typealias GetBeersResponse = (_ beers: [Beer]?, _ error: Error?) -> Void

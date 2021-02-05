@@ -1,6 +1,6 @@
 
-
 import Foundation
+
 struct IngredientsDTO : Codable {
 	let malt : [MaltDTO]?
 	let hops : [HopDTO]?

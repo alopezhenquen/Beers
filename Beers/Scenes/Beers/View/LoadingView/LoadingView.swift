@@ -1,16 +1,14 @@
-//
-//  LoadingView.swift
-//  MarvelCharactersExample
-//
-//  Created by Kill3r on 24/1/21.
-//
+
 
 import UIKit
 
 class LoadingView: UICollectionReusableView {
     
+    // MARK: IBOutlets
     @IBOutlet weak var loadingIndicator: UIActivityIndicatorView!
     @IBOutlet weak var messageLabel: UILabel!
+    
+    //MARK: Methods
     
     override func awakeFromNib() {
         super.awakeFromNib()

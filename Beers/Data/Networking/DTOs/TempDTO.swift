@@ -1,6 +1,6 @@
 
-
 import Foundation
+
 struct TempDTO : Codable {
 	let value : Double?
 	let unit : String?

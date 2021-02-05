@@ -1,5 +1,4 @@
 
-
 import UIKit
 import Kingfisher
 
@@ -7,7 +6,7 @@ class BeersImagesFetcher: BeerImagesRepo {
     
     func fetchImage(from url: URL?, to imageView: UIImageView) {
         guard let url = url else {
-            imageView.image = UIImage(named: "image-not-available")
+            imageView.image = UIImage(named: "imageNotAvailable")
             return
         }
         imageView.kf.indicatorType = .activity

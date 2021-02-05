@@ -1,6 +1,6 @@
 
-
 import Foundation
+
 struct AmountDTO : Codable {
 	let value : Double?
 	let unit : String?

@@ -1,17 +1,18 @@
-//
-//  BeerCell.swift
-//  Beers
-//
-//  Created by Kill3r on 4/2/21.
-//
+
 
 import UIKit
 
 class BeerCell: UICollectionViewCell {
+    
+    // MARK: IBOutlets
     @IBOutlet weak var beerImage: UIImageView!
     @IBOutlet weak var beerName: UILabel!
+    
+    // MARK: Properties
     fileprivate var beerImagesRepo: BeerImagesRepo?
 
+    //MARK: Methods
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         setupViews()
@@ -19,15 +20,18 @@ class BeerCell: UICollectionViewCell {
     
     func setupViews() {
         beerName.textColor = UIColor.init(named: "beerName.textColor")
+        beerName.font = UIFont.systemFont(ofSize: 17.0, weight: .regular)
+        
+        beerImage.contentMode = .scaleAspectFit
+        
         self.backgroundColor = UIColor.init(named: "beerCell.backgroundColor")
         self.layer.cornerRadius = 5
-        beerImage.contentMode = .scaleAspectFit
     }
     
     func configure(with beer: Beer, using beersImagesRepo: BeerImagesRepo?) {
-        beerName?.setText(with: beer.name ?? "")
         self.beerImagesRepo = beersImagesRepo
-        cancelImageDownload()
+        beerName?.setText(with: beer.name ?? NSLocalizedString("NoNameAvailableText", comment: ""))
+        cancelImageDownload() // Cancel Prefetch.
         beersImagesRepo?.fetchImage(from: beer.imageUrl, to: beerImage)
     }
     

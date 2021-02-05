@@ -1,5 +1,4 @@
 
-
 import Foundation
 
 class DefaultDecoder<T: Decodable> {

@@ -1,9 +1,3 @@
-//
-//  MarvelAPI.swift
-//  MarvelCharactersExample
-//
-//  Created by Kill3r on 14/1/21.
-//
 
 import Foundation
 

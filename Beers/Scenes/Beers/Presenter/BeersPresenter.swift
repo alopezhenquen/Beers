@@ -1,6 +1,7 @@
 
 
 import Foundation
+import SwiftLog
 
 class BeersPresenter {
     //MARK: Properties
@@ -32,7 +33,9 @@ class BeersPresenter {
                                     guard let error = error else {
                                         guard let beers = beers else {
                                             self.presentedBeersPage -= 1
-                                            self.view?.showError(error: nil) // TODO
+                                            let _error = DataError.noBeersDataAvailable
+                                            self.view?.showError(error: _error)
+                                            logw("\(_error.localizedDescription)")
                                             return
                                         }
                                         if beers.isEmpty {
@@ -51,7 +54,8 @@ class BeersPresenter {
                                         return
                                     }
                                     self.presentedBeersPage -= 1
-                                    self.view?.showError(error: error)
+                                    self.view?.showError(error: DataError.noBeersDataAvailable)
+                                    logw("\(error.localizedDescription)")
                                })
     }
     
@@ -65,7 +69,9 @@ class BeersPresenter {
                                     guard let error = error else {
                                         guard let beers = beers else {
                                             self.presentedBeersPage -= 1
-                                            self.view?.showError(error: nil) // TODO
+                                            let _error = DataError.noBeersDataAvailable
+                                            self.view?.showError(error: _error)
+                                            logw("\(_error.localizedDescription)")
                                             return
                                         }
                                         if beers.isEmpty {
@@ -89,7 +95,8 @@ class BeersPresenter {
                                         return
                                     }
                                     self.presentedBeersPage -= 1
-                                    self.view?.showError(error: error)
+                                    self.view?.showError(error: DataError.noBeersDataAvailable)
+                                    logw("\(error.localizedDescription)")
                                })
     }
 }

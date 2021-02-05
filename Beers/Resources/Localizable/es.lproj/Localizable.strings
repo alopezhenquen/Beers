@@ -1,23 +1,29 @@
 
 
-"FavoritesTitle" = "Favoritos";
+// Beers Module
 "BeersTitle" = "Cervezas";
-"DetailsTitle" = "Detalles";
 "SearchByFoodBarTitle" = "Buscar compatibles con ..";
+
+"NoDataAvailable" = "No existen datos disponibles";
+"NoMoreDataAvailable" = "No existen más datos";
+
+
+// Beer Details Module
+"DetailsTitle" = "Detalles";
+
 "BeerNameLabelText" = "Nombre";
 "BeerDescriptionLabelText" = "Descripción";
-"AddToFavoritesLabel" = "Agregar a";
-"RemoveFromFavoritesLabel" = "Eliminar de";
+"BeerTagsLabelText" = "Tags";
+"BrewedLabelText" = "Creación";
+"FoodPairingLabelText" = "Compatibles";
+
 "NoNameAvailableText" = "No disponible";
 "NoDescriptionAvailableText" = "No disponible";
-"NoMoreDataAvailable" = "No existen más datos";
-"NoDataAvailable" = "No existen datos disponibles";
-"UndefinedError" = "Error desconocido. Por favor, contactar al @developer.";
-"FetcherInternalError" = "No se han podido obtener los datos solicitados desde Punk API.";
-"RealmInternalError" = "No se han podido obtener los datos solicitados desde el almacenamiento interno.";
-"AddToFavoritesRequestError" = "No se ha podido agregar a favoritos.";
-"RemoveFromFavoritesRequestError" = "No se ha podido remover de favoritos.";
-"NoBeerDataAvailableError" = "No se pudieron obtener los datos solicitados de las cervezas.";
-"NoFavoriteDataAvailableError" = "No se pudieron obtener los datos solicitados de los Favoritos.";
-"Beer" = "Cerveza";
-"Picture" = "Imagen";
+"NoTagAvailableText" = "No disponible";
+"NoBrewedAvailableText" = "No disponible";
+"NoFoodPairingAvailableText" = "No disponible";
+
+
+// Errors
+"NoBeersDataError" = "Ha ocurrido un problema al obtener los datos.";
+"FetcherInternalError" = "Problemas al obtener los datos. Error interno.";

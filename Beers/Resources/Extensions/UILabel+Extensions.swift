@@ -3,6 +3,7 @@
 import UIKit
 
 extension UILabel {
+    
     func fadeOutNow(){
         self.alpha = 0
     }

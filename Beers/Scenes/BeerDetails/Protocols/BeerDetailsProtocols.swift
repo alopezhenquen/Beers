@@ -1,10 +1,4 @@
-//
-//  BeerDetailsProtocols.swift
-//  Beers
-//
-//  Created by Kill3r on 5/2/21.
-//  
-//
+
 
 import Foundation
 
@@ -12,7 +6,7 @@ import Foundation
 protocol PresenterToBeerDetailsViewProtocol: class {
     //MARK: Methods
     func showError(error: Error)
-    func showBeerDetails(beer: Beer, isFavorite: Bool)
+    func showBeerDetails(with beer: Beer)
 }
 
 //MARK: Implemented by Presenter (View -> Presenter)

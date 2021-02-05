@@ -1,6 +1,5 @@
 
 import UIKit
-import Foundation
 
 protocol BeerImagesRepo {
     func fetchImage(from url: URL?, to imageView: UIImageView)

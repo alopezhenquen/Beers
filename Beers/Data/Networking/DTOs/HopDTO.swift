@@ -1,6 +1,6 @@
 
-
 import Foundation
+
 struct HopDTO : Codable {
 	let name : String?
 	let amount : AmountDTO?

@@ -1,14 +1,9 @@
-//
-//  BeerDetailsPresenter.swift
-//  Beers
-//
-//  Created by Kill3r on 5/2/21.
-//  
-//
+
 
 import Foundation
 
 class BeerDetailsPresenter {
+    
     //MARK: Properties
     weak var view: PresenterToBeerDetailsViewProtocol?
     var interactor: PresenterToBeerDetailsInteractorProtocol?
@@ -16,6 +11,7 @@ class BeerDetailsPresenter {
     var beer: Beer
 
     //MARK: Methods
+    
     init(view: PresenterToBeerDetailsViewProtocol,
          interactor: PresenterToBeerDetailsInteractorProtocol,
          router: PresenterToBeerDetailsRouterProtocol,
@@ -30,10 +26,8 @@ class BeerDetailsPresenter {
 extension BeerDetailsPresenter: ViewToBeerDetailsPresenterProtocol {
     //MARK: Methods
     func viewWillAppear() {
-        view?.showBeerDetails(beer: beer, isFavorite: false)
+        view?.showBeerDetails(with: beer)
     }
 }
 
-extension BeerDetailsPresenter: InteractorToBeerDetailsPresenterProtocol {
-    //MARK: Methods
-}
+extension BeerDetailsPresenter: InteractorToBeerDetailsPresenterProtocol {}

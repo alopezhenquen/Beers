@@ -1,6 +1,6 @@
 
-
 import Foundation
+
 struct BoilVolumeDTO : Codable {
 	let value : Int?
 	let unit : String?

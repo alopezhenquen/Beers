@@ -9,11 +9,11 @@ class BeersInteractor: PresenterToBeersInteractorProtocol {
     fileprivate var beersRepo: BeersRepo
     
     //MARK: Methods
+    
     init(beersRepo: BeersRepo) {
         self.beersRepo = beersRepo
     }
-
-    //MARK: Methods
+    
     func fetchBeers(page: Int, pagesTotal: Int, response: @escaping FetchBeersResponse) {
         beersRepo.getBeers(page: page,
                            pagesTotal: pagesTotal) { (beers, error) in
