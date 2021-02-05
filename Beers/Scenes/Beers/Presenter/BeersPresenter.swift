@@ -121,7 +121,7 @@ extension BeersPresenter: ViewToBeersPresenterProtocol {
     }
     
     func updateSearchField(with searchField: String) {
-        self.searchField = searchField
+        self.searchField = searchField.replacingOccurrences(of: " ", with: "_")
         self.noMoreData = false
         self.presentedBeersPage = 0
         fetchMoreBeers()
