@@ -53,8 +53,7 @@ More about this in: https://cheesecakelabs.com/blog/ios-project-architecture-usi
 
 **VIPER Modules Template**:
 
-Using a VIPER template for Xcode -customized by myself- to create VIPER modules easily (using Storyboards)
-- VIPER Template https://github.com/alopezhenquen/VIPER-by-Kill3r.xctemplate 
+Using a VIPER template for Xcode -customized by myself- to create VIPER modules easily (using XIB Files).
 
 **VIPER in iOS Articles**:
 
