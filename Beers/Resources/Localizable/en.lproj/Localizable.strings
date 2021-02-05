@@ -1,0 +1,30 @@
+
+
+// Beers Module
+"BeersTitle" = "Beers";
+"SearchByFoodBarTitle" = "Search by Food Pairing ..";
+
+"NoDataAvailable" = "No Data Available";
+"NoMoreDataAvailable" = "No More Data Available";
+
+
+
+// Beer Details Module
+"DetailsTitle" = "Details";
+
+"BeerNameLabelText" = "Name";
+"BeerDescriptionLabelText" = "Description";
+"BeerTagsLabelText" = "Tags";
+"BrewedLabelText" = "Brewed";
+"FoodPairingLabelText" = "Food Pairing";
+
+"NoNameAvailableText" = "No name available";
+"NoDescriptionAvailableText" = "No description available";
+"NoTagAvailableText" = "No tags available";
+"NoBrewedAvailableText" = "No brewed data available";
+"NoFoodPairingAvailableText" = "No food pairing data available";
+
+
+// Errors
+"NoBeersDataError" = "Beers data could not be obtained.";
+"FetcherInternalError" = "Fetcher Internal Error.";
