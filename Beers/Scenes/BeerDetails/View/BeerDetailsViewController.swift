@@ -37,30 +37,35 @@ class BeerDetailsViewController: UIViewController {
     func setupViews() {
         
         beerNameLabel.accessibilityIdentifier = "beerNameLabel"
+        beerNameLabel.textColor = UIColor.init(named: "beerDetailsLabels.textColor")
         beerNameLabel.setTextAndAccessibilityValue(with: NSLocalizedString("BeerNameLabelText", comment: ""))
         
         beerName.accessibilityIdentifier = "beerName"
         beerName.setTextAndAccessibilityValue(with: "")
         
         tagsLabel.accessibilityIdentifier = "tagsLabel"
+        tagsLabel.textColor = UIColor.init(named: "beerDetailsLabels.textColor")
         tagsLabel.setTextAndAccessibilityValue(with: NSLocalizedString("BeerTagsLabelText", comment: ""))
         
         tagsLine.accessibilityIdentifier = "tagsLine"
         tagsLine.setTextAndAccessibilityValue(with: "")
         
         brewedLabel.accessibilityIdentifier = "brewedLabel"
+        brewedLabel.textColor = UIColor.init(named: "beerDetailsLabels.textColor")
         brewedLabel.setTextAndAccessibilityValue(with: NSLocalizedString("BrewedLabelText", comment: ""))
         
         brewedText.accessibilityIdentifier = "brewedText"
         brewedText.setTextAndAccessibilityValue(with: "")
         
         descriptionLabel.accessibilityIdentifier = "descriptionLabel"
+        descriptionLabel.textColor = UIColor.init(named: "beerDetailsLabels.textColor")
         descriptionLabel.setTextAndAccessibilityValue(with: NSLocalizedString("BeerDescriptionLabelText", comment: ""))
         
         descriptionText.accessibilityIdentifier = "beerDescription"
         descriptionText.setTextAndAccessibilityValue(with: "")
         
         foodPairingLabel.accessibilityIdentifier = "foodPairingLabel"
+        foodPairingLabel.textColor = UIColor.init(named: "beerDetailsLabels.textColor")
         foodPairingLabel.setTextAndAccessibilityValue(with: NSLocalizedString("FoodPairingLabelText", comment: ""))
         
         foodPairingText.accessibilityIdentifier = "foodPairingText"
