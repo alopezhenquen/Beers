@@ -49,4 +49,5 @@ protocol PresenterToBeersInteractorProtocol: class {
 //MARK: Implemented by Router (Presenter -> Router)
 protocol PresenterToBeersRouterProtocol: class {
     //MARK: Methods
+    func routeToBeerDetails(with beer: Beer)
 }

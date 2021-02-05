@@ -121,7 +121,7 @@ extension BeersPresenter: ViewToBeersPresenterProtocol {
     }
     
     func didSelectedBeer(beer: Beer) {
-        print("Beer \(beer.name ?? "UNDEFINED") has been selected.")
+        router?.routeToBeerDetails(with: beer)
     }
 }
 

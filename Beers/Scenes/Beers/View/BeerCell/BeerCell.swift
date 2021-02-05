@@ -21,6 +21,7 @@ class BeerCell: UICollectionViewCell {
         beerName.textColor = UIColor.init(named: "beerName.textColor")
         self.backgroundColor = UIColor.init(named: "beerCell.backgroundColor")
         self.layer.cornerRadius = 5
+        beerImage.contentMode = .scaleAspectFit
     }
     
     func configure(with beer: Beer, using beersImagesRepo: BeerImagesRepo?) {
