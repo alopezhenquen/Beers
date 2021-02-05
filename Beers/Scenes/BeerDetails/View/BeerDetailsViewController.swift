@@ -96,7 +96,7 @@ extension BeerDetailsViewController: PresenterToBeerDetailsViewProtocol {
     //MARK: Methods
     
     func showError(error: Error) {
-        self.showErrorAlert(with: error)
+        // TODO
     }
     
     func showBeerDetails(with beer: Beer) {

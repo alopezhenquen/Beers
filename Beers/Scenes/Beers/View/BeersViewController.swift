@@ -113,7 +113,7 @@ extension BeersViewController: PresenterToBeersViewProtocol {
     }
     
     func showError(error: Error) {
-        self.showErrorAlert(with: error)
+        // TODO .. 
     }
     
     func noMoreDataAvailable() {
