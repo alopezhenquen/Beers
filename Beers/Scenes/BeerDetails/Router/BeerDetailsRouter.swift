@@ -3,13 +3,20 @@
 import UIKit
 
 class BeerDetailsRouter {
+    //MARK: Properties
+    var errorManager: ErrorManager?
     
     //MARK: Methods
-    func navigateToBeerDetails(from viewController: UIViewController, with beer: Beer) {
+    func navigateToBeerDetails(from viewController: UIViewController,
+                               with beer: Beer) {
         let view = BeerDetailsBuilder.build(with: beer,
                                             router: self)
         viewController.navigationController?.pushViewController(view, animated: true)
     }
 }
 
-extension BeerDetailsRouter: PresenterToBeerDetailsRouterProtocol {}
+extension BeerDetailsRouter: PresenterToBeerDetailsRouterProtocol {
+    func showError(with error: Error) {
+        errorManager?.showError(with: error)
+    }
+}

@@ -34,7 +34,8 @@ class BeersPresenter {
                                         guard let beers = beers else {
                                             self.presentedBeersPage -= 1
                                             let _error = DataError.noBeersDataAvailable
-                                            self.view?.showError(error: _error)
+                                            self.view?.showNoData()
+                                            self.router?.showError(with: _error)
                                             logw("\(_error.localizedDescription)")
                                             return
                                         }
@@ -54,7 +55,8 @@ class BeersPresenter {
                                         return
                                     }
                                     self.presentedBeersPage -= 1
-                                    self.view?.showError(error: DataError.noBeersDataAvailable)
+                                    self.view?.showNoData()
+                                    self.router?.showError(with: DataError.noBeersDataAvailable)
                                     logw("\(error.localizedDescription)")
                                })
     }
@@ -70,7 +72,8 @@ class BeersPresenter {
                                         guard let beers = beers else {
                                             self.presentedBeersPage -= 1
                                             let _error = DataError.noBeersDataAvailable
-                                            self.view?.showError(error: _error)
+                                            self.view?.showNoData()
+                                            self.router?.showError(with: _error)
                                             logw("\(_error.localizedDescription)")
                                             return
                                         }
@@ -95,7 +98,8 @@ class BeersPresenter {
                                         return
                                     }
                                     self.presentedBeersPage -= 1
-                                    self.view?.showError(error: DataError.noBeersDataAvailable)
+                                    self.view?.showNoData()
+                                    self.router?.showError(with: DataError.noBeersDataAvailable)
                                     logw("\(error.localizedDescription)")
                                })
     }
@@ -106,6 +110,16 @@ extension BeersPresenter: ViewToBeersPresenterProtocol {
     //MARK: Methods
     func viewDidLoad() {
         fetchBeers()
+    }
+    
+    func reloadData() {
+        self.presentedBeersPage = 0
+        self.noMoreData = false
+        if searchField.isEmpty {
+            fetchBeers()
+        } else {
+            fetchBeers(by: searchField)
+        }
     }
     
     func fetchMoreBeers() {
