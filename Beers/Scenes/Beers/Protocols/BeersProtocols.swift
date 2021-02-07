@@ -10,7 +10,6 @@ protocol PresenterToBeersViewProtocol: class {
     func onFetchCompleted(with beers: [Beer])
     func onNewFetchCompleted(with beers: [Beer])
     func showNoData()
-    func showError(error: Error)
     func noMoreDataAvailable()
 }
 
@@ -18,6 +17,7 @@ protocol PresenterToBeersViewProtocol: class {
 protocol ViewToBeersPresenterProtocol: class {
     //MARK: Methods
     func viewDidLoad()
+    func reloadData()
     func fetchMoreBeers()
     func updateSearchField(with searchField: String)
     func didSelectedBeer(beer: Beer)
@@ -44,4 +44,5 @@ protocol PresenterToBeersInteractorProtocol: class {
 protocol PresenterToBeersRouterProtocol: class {
     //MARK: Methods
     func routeToBeerDetails(with beer: Beer)
+    func showError(with error: Error)
 }

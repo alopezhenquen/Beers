@@ -15,10 +15,12 @@ class BeersBuilder {
         
         // VIPER
         let view = BeersViewController.init()
+        let errorManager = DefaultErrorManager.init(rootView: view)
         let interactor = BeersInteractor(beersRepo: beersRepo)
         let beerDetailsRouter = BeerDetailsRouter.init()
         let router = BeersRouter(beerDetailsRouter: beerDetailsRouter,
-                                 beersViewController: view)
+                                 beersViewController: view,
+                                 errorManager: errorManager)
         let presenter = BeersPresenter(view: view,
                                        interactor: interactor,
                                        router: router)

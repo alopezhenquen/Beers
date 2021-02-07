@@ -44,11 +44,12 @@
 		5110847C25CC27BE003D1D13 /* LoadingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5110847A25CC27BE003D1D13 /* LoadingView.xib */; };
 		5110848A25CC2A40003D1D13 /* BeerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5110848825CC2A40003D1D13 /* BeerCell.swift */; };
 		5110848B25CC2A40003D1D13 /* BeerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5110848925CC2A40003D1D13 /* BeerCell.xib */; };
-		5110849C25CC2A7A003D1D13 /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5110849625CC2A7A003D1D13 /* UIViewController+Extensions.swift */; };
 		5110849D25CC2A7A003D1D13 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5110849725CC2A7A003D1D13 /* String+Extensions.swift */; };
 		5110849E25CC2A7A003D1D13 /* UITextView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5110849825CC2A7A003D1D13 /* UITextView+Extensions.swift */; };
 		5110849F25CC2A7A003D1D13 /* UILabel+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5110849925CC2A7A003D1D13 /* UILabel+Extensions.swift */; };
 		511BB18025CD7A31003A42AE /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 511BB17F25CD7A31003A42AE /* Errors.swift */; };
+		511BB1CA25CDA05C003A42AE /* DefaultErrorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 511BB1C825CDA05C003A42AE /* DefaultErrorViewController.swift */; };
+		511BB1CB25CDA05C003A42AE /* DefaultErrorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 511BB1C925CDA05C003A42AE /* DefaultErrorView.xib */; };
 		5181859E25CC7BDD00DCCA27 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 518185A025CC7BDD00DCCA27 /* Localizable.strings */; };
 		518185BE25CC8C2100DCCA27 /* DefaultDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 518185BD25CC8C2100DCCA27 /* DefaultDecoder.swift */; };
 		518185CF25CCB44E00DCCA27 /* BeerDetailsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 518185C825CCB44E00DCCA27 /* BeerDetailsView.xib */; };
@@ -58,6 +59,8 @@
 		518185E625CCB45C00DCCA27 /* BeerDetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 518185DE25CCB45B00DCCA27 /* BeerDetailsPresenter.swift */; };
 		518185E725CCB45C00DCCA27 /* BeerDetailsBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 518185E025CCB45B00DCCA27 /* BeerDetailsBuilder.swift */; };
 		518185E825CCB45C00DCCA27 /* BeerDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 518185E225CCB45C00DCCA27 /* BeerDetailsViewController.swift */; };
+		51E2CF3625D0232E00AD79D8 /* ErrorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E2CF3525D0232E00AD79D8 /* ErrorManager.swift */; };
+		51E2CF4025D0253400AD79D8 /* DefaultErrorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E2CF3F25D0253400AD79D8 /* DefaultErrorManager.swift */; };
 		780170FFE8EFDA48D4EA5FC5 /* Pods_Beers_BeersUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D464F9A4348DD2D0A58605C /* Pods_Beers_BeersUITests.framework */; };
 		96A7AA978D5BC809E86FF858 /* Pods_BeersTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE3C0DC91C953D2163A087BF /* Pods_BeersTests.framework */; };
 /* End PBXBuildFile section */
@@ -124,11 +127,12 @@
 		5110847A25CC27BE003D1D13 /* LoadingView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoadingView.xib; sourceTree = "<group>"; };
 		5110848825CC2A40003D1D13 /* BeerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerCell.swift; sourceTree = "<group>"; };
 		5110848925CC2A40003D1D13 /* BeerCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BeerCell.xib; sourceTree = "<group>"; };
-		5110849625CC2A7A003D1D13 /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
 		5110849725CC2A7A003D1D13 /* String+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		5110849825CC2A7A003D1D13 /* UITextView+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextView+Extensions.swift"; sourceTree = "<group>"; };
 		5110849925CC2A7A003D1D13 /* UILabel+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UILabel+Extensions.swift"; sourceTree = "<group>"; };
 		511BB17F25CD7A31003A42AE /* Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
+		511BB1C825CDA05C003A42AE /* DefaultErrorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultErrorViewController.swift; sourceTree = "<group>"; };
+		511BB1C925CDA05C003A42AE /* DefaultErrorView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DefaultErrorView.xib; sourceTree = "<group>"; };
 		5181859F25CC7BDD00DCCA27 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		518185A125CC7BE300DCCA27 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		518185BD25CC8C2100DCCA27 /* DefaultDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultDecoder.swift; sourceTree = "<group>"; };
@@ -139,6 +143,8 @@
 		518185DE25CCB45B00DCCA27 /* BeerDetailsPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeerDetailsPresenter.swift; sourceTree = "<group>"; };
 		518185E025CCB45B00DCCA27 /* BeerDetailsBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeerDetailsBuilder.swift; sourceTree = "<group>"; };
 		518185E225CCB45C00DCCA27 /* BeerDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeerDetailsViewController.swift; sourceTree = "<group>"; };
+		51E2CF3525D0232E00AD79D8 /* ErrorManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorManager.swift; sourceTree = "<group>"; };
+		51E2CF3F25D0253400AD79D8 /* DefaultErrorManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultErrorManager.swift; sourceTree = "<group>"; };
 		7D464F9A4348DD2D0A58605C /* Pods_Beers_BeersUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Beers_BeersUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C25FB4E2C66A69BCE798DAF /* Pods_Beers.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Beers.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7858722A8AD6D0E8B56BC59 /* Pods-Beers-BeersUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Beers-BeersUITests.debug.xcconfig"; path = "Target Support Files/Pods-Beers-BeersUITests/Pods-Beers-BeersUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -392,6 +398,7 @@
 		511083C325CBFF45003D1D13 /* Application */ = {
 			isa = PBXGroup;
 			children = (
+				511BB1B625CD9FA6003A42AE /* Alerts */,
 				5110838925CBFD80003D1D13 /* LaunchScreen */,
 				511083C725CBFF45003D1D13 /* Navigation */,
 			);
@@ -490,7 +497,6 @@
 		5110849525CC2A7A003D1D13 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				5110849625CC2A7A003D1D13 /* UIViewController+Extensions.swift */,
 				5110849725CC2A7A003D1D13 /* String+Extensions.swift */,
 				5110849825CC2A7A003D1D13 /* UITextView+Extensions.swift */,
 				5110849925CC2A7A003D1D13 /* UILabel+Extensions.swift */,
@@ -504,6 +510,40 @@
 				511BB17F25CD7A31003A42AE /* Errors.swift */,
 			);
 			path = Exceptions;
+			sourceTree = "<group>";
+		};
+		511BB1B625CD9FA6003A42AE /* Alerts */ = {
+			isa = PBXGroup;
+			children = (
+				511BB1BE25CDA000003A42AE /* Errors */,
+			);
+			path = Alerts;
+			sourceTree = "<group>";
+		};
+		511BB1BE25CDA000003A42AE /* Errors */ = {
+			isa = PBXGroup;
+			children = (
+				51E2CF5025D032F200AD79D8 /* DefaultError */,
+				511BB1D925CDAAE5003A42AE /* Protocols */,
+			);
+			path = Errors;
+			sourceTree = "<group>";
+		};
+		511BB1D825CDAACD003A42AE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				511BB1C825CDA05C003A42AE /* DefaultErrorViewController.swift */,
+				511BB1C925CDA05C003A42AE /* DefaultErrorView.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		511BB1D925CDAAE5003A42AE /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				51E2CF3525D0232E00AD79D8 /* ErrorManager.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 		5181858A25CC7B8400DCCA27 /* Localizable */ = {
@@ -582,6 +622,15 @@
 				518185E225CCB45C00DCCA27 /* BeerDetailsViewController.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		51E2CF5025D032F200AD79D8 /* DefaultError */ = {
+			isa = PBXGroup;
+			children = (
+				51E2CF3F25D0253400AD79D8 /* DefaultErrorManager.swift */,
+				511BB1D825CDAACD003A42AE /* View */,
+			);
+			path = DefaultError;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -698,6 +747,7 @@
 				5110848B25CC2A40003D1D13 /* BeerCell.xib in Resources */,
 				5110847C25CC27BE003D1D13 /* LoadingView.xib in Resources */,
 				518185CF25CCB44E00DCCA27 /* BeerDetailsView.xib in Resources */,
+				511BB1CB25CDA05C003A42AE /* DefaultErrorView.xib in Resources */,
 				5110835B25CBFC28003D1D13 /* LaunchScreen.storyboard in Resources */,
 				5110835825CBFC28003D1D13 /* Assets.xcassets in Resources */,
 			);
@@ -853,21 +903,23 @@
 				5110840C25CC0978003D1D13 /* PunkAPI.swift in Sources */,
 				518185E525CCB45C00DCCA27 /* BeerDetailsRouter.swift in Sources */,
 				518185BE25CC8C2100DCCA27 /* DefaultDecoder.swift in Sources */,
+				51E2CF4025D0253400AD79D8 /* DefaultErrorManager.swift in Sources */,
 				511083F025CC02B0003D1D13 /* BeerDTO.swift in Sources */,
 				511083B725CBFE0F003D1D13 /* BeersInteractor.swift in Sources */,
 				511083E925CC02B0003D1D13 /* FermentationDTO.swift in Sources */,
 				511083B425CBFE0F003D1D13 /* BeersViewController.swift in Sources */,
 				5110843A25CC13A2003D1D13 /* BeersFetcher.swift in Sources */,
+				511BB1CA25CDA05C003A42AE /* DefaultErrorViewController.swift in Sources */,
 				5110849E25CC2A7A003D1D13 /* UITextView+Extensions.swift in Sources */,
 				5110834F25CBFC25003D1D13 /* AppDelegate.swift in Sources */,
 				511083E825CC02B0003D1D13 /* IngredientsDTO.swift in Sources */,
 				5110843025CC11BA003D1D13 /* BeersRepo.swift in Sources */,
 				5110845625CC1F46003D1D13 /* BeerImagesRepo.swift in Sources */,
-				5110849C25CC2A7A003D1D13 /* UIViewController+Extensions.swift in Sources */,
 				511BB18025CD7A31003A42AE /* Errors.swift in Sources */,
 				5110847B25CC27BE003D1D13 /* LoadingView.swift in Sources */,
 				518185E425CCB45C00DCCA27 /* BeerDetailsInteractor.swift in Sources */,
 				511083B925CBFE0F003D1D13 /* BeersRouter.swift in Sources */,
+				51E2CF3625D0232E00AD79D8 /* ErrorManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

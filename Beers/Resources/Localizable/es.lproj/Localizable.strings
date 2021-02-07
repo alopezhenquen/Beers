@@ -27,3 +27,5 @@
 // Errors
 "NoBeersDataError" = "Ha ocurrido un problema al obtener los datos.";
 "FetcherInternalError" = "Problemas al obtener los datos. Error interno.";
+"ErrorTitle" = "Error";
+"ErrorButtonTitle" = "Entendido";

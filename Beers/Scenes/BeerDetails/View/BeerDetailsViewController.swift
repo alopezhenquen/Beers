@@ -95,10 +95,6 @@ extension BeerDetailsViewController: PresenterToBeerDetailsViewProtocol {
     
     //MARK: Methods
     
-    func showError(error: Error) {
-        // TODO
-    }
-    
     func showBeerDetails(with beer: Beer) {
         
         if let _name = beer.name, !_name.isEmpty {
