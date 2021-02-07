@@ -11,6 +11,8 @@ class BeersViewController: UIViewController {
     var presenter: ViewToBeersPresenterProtocol?
     var beerImagesRepo: BeerImagesRepo?
     var loadingView: LoadingView?
+    var refresher: UIRefreshControl!
+    
     
     fileprivate let reuseIdentifier = "BeerCell"
     fileprivate let itemsPerRow: CGFloat = 2
@@ -45,6 +47,11 @@ class BeersViewController: UIViewController {
         widthPerItem = availableWidth / itemsPerRow
         heightPerItem = widthPerItem * 1.2
         
+        refresher = UIRefreshControl()
+        beersCollection.alwaysBounceVertical = true
+        refresher.addTarget(self, action: #selector(reloadData), for: .valueChanged)
+        beersCollection.refreshControl = refresher
+        
         // Setup SearchBar as Navigation Item
         let searchController = UISearchController(searchResultsController: nil)
         searchController.searchResultsUpdater = self
@@ -66,6 +73,10 @@ class BeersViewController: UIViewController {
             loadingViewNib,
             forSupplementaryViewOfKind: UICollectionView.elementKindSectionFooter,
             withReuseIdentifier: "LoadingView")
+    }
+    
+    @objc func reloadData(){
+        presenter?.reloadData()
     }
     
     func checkEndOfPage(at cellIndex: Int) {
@@ -94,32 +105,40 @@ extension BeersViewController: PresenterToBeersViewProtocol {
         beersList += beers
         isLoading = false
         moreDataAvailable = true
-        beersCollection.reloadData()
+        DispatchQueue.main.async {
+            self.beersCollection.reloadData()
+            self.refresher.endRefreshing()
+        }
     }
     
     func onNewFetchCompleted(with beers: [Beer]) {
         beersList = beers
         isLoading = false
         moreDataAvailable = true
-        beersCollection.reloadData()
+        DispatchQueue.main.async {
+            self.beersCollection.reloadData()
+            self.refresher.endRefreshing()
+        }
     }
     
     func showNoData() {
         isLoading = false
         moreDataAvailable = false
         beersList.removeAll()
-        beersCollection.reloadData()
-        loadingView?.showMessage(message: NSLocalizedString("NoDataAvailable", comment: ""))
-    }
-    
-    func showError(error: Error) {
-        self.showErrorAlert(with: error)
+        DispatchQueue.main.async {
+            self.beersCollection.reloadData()
+            self.loadingView?.showMessage(message: NSLocalizedString("NoDataAvailable", comment: ""))
+            self.refresher.endRefreshing()
+        }
     }
     
     func noMoreDataAvailable() {
         isLoading = false
         moreDataAvailable = false
-        loadingView?.showMessage(message: NSLocalizedString("NoMoreDataAvailable", comment: ""))
+        DispatchQueue.main.async {
+            self.loadingView?.showMessage(message: NSLocalizedString("NoMoreDataAvailable", comment: ""))
+            self.refresher.endRefreshing()
+        }
     }
 }
 

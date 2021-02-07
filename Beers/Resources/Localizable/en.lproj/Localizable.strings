@@ -8,7 +8,6 @@
 "NoMoreDataAvailable" = "No More Data Available";
 
 
-
 // Beer Details Module
 "DetailsTitle" = "Details";
 
@@ -28,3 +27,6 @@
 // Errors
 "NoBeersDataError" = "Beers data could not be obtained.";
 "FetcherInternalError" = "Fetcher Internal Error.";
+"ErrorTitle" = "Error";
+"ErrorButtonTitle" = "I Get It";
+

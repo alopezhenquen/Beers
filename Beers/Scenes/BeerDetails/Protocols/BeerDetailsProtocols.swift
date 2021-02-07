@@ -5,7 +5,6 @@ import Foundation
 //MARK: Implemented by View (Presenter -> View)
 protocol PresenterToBeerDetailsViewProtocol: class {
     //MARK: Methods
-    func showError(error: Error)
     func showBeerDetails(with beer: Beer)
 }
 
@@ -28,4 +27,5 @@ protocol PresenterToBeerDetailsInteractorProtocol: class {
 //MARK: Implemented by Router (Presenter -> Router)
 protocol PresenterToBeerDetailsRouterProtocol: class {
     //MARK: Methods
+    func showError(with error: Error)
 }

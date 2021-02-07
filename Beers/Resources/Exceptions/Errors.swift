@@ -5,8 +5,9 @@ import Foundation
 enum FetcherError: Error {
     case internalError
 }
+
 extension FetcherError : LocalizedError {
-    var errorDescription: String? {
+    var localizedDescription: String {
         switch self {
             case .internalError:
                 return NSLocalizedString("FetcherInternalError", comment: "")
@@ -14,10 +15,10 @@ extension FetcherError : LocalizedError {
     }
 }
 
-
 enum DataError : Error {
     case noBeersDataAvailable
 }
+
 extension DataError : LocalizedError {
     var localizedDescription: String {
         switch self {
