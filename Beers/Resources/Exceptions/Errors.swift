@@ -7,7 +7,7 @@ enum FetcherError: Error {
 }
 
 extension FetcherError : LocalizedError {
-    var localizedDescription: String {
+    var errorDescription: String? {
         switch self {
             case .internalError:
                 return NSLocalizedString("FetcherInternalError", comment: "")
@@ -20,7 +20,7 @@ enum DataError : Error {
 }
 
 extension DataError : LocalizedError {
-    var localizedDescription: String {
+    var errorDescription: String? {
         switch self {
             case .noBeersDataAvailable:
                 return NSLocalizedString("NoBeersDataError", comment: "")

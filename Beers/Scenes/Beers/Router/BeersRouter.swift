@@ -3,6 +3,7 @@
 import UIKit
 
 class BeersRouter {
+    
     //MARK: Properties
     var beerDetailsRouter: BeerDetailsRouter
     var beersViewController: BeersViewController
