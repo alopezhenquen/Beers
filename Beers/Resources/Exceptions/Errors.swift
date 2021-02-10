@@ -3,13 +3,13 @@
 import Foundation
 
 enum FetcherError: Error {
-    case internalError
+    case `internal`
 }
 
 extension FetcherError : LocalizedError {
     var errorDescription: String? {
         switch self {
-            case .internalError:
+            case .internal:
                 return NSLocalizedString("FetcherInternalError", comment: "")
         }
     }

@@ -6,12 +6,12 @@ import Alamofire
 class BeersFetcher : BeersRepo {
     
     let decoder: DefaultDecoder<[BeerDTO]>
-    let translationManager: Translation
+    let translation: Translation
     
     init(decoder: DefaultDecoder<[BeerDTO]>,
-         translationManager: Translation) {
+         translation: Translation) {
         self.decoder = decoder
-        self.translationManager = translationManager
+        self.translation = translation
     }
     
     func getBeers(page: Int, pagesTotal: Int, response: @escaping GetBeersResponse) {
@@ -28,11 +28,11 @@ class BeersFetcher : BeersRepo {
         AlamofireManager.request(data: requestData,
                                  decoder: decoder) { [self] _response in
             guard let beers = _response else {
-                response(nil, FetcherError.internalError)
+                response(nil, FetcherError.internal)
                 return
             }
             let beersList = beers.map({
-                self.translationManager.translate(from: $0)
+                self.translation.translate(from: $0)
             })
             response(beersList, nil)
         } failure: { _error in
@@ -55,11 +55,11 @@ class BeersFetcher : BeersRepo {
         AlamofireManager.request(data: requestData,
                                  decoder: decoder) { [self] _response in
             guard let beers = _response else {
-                response(nil, FetcherError.internalError)
+                response(nil, FetcherError.internal)
                 return
             }
             let beersList = beers.map({
-                self.translationManager.translate(from: $0)
+                self.translation.translate(from: $0)
             })
             response(beersList, nil)
         } failure: { _error in

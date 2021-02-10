@@ -10,17 +10,18 @@ class BeersBuilder {
         let decoder = DefaultDecoder.init(for: [BeerDTO].self)
         let translation = Translation.init()
         let beersRepo = BeersFetcher.init(decoder: decoder,
-                                          translationManager: translation)
+                                          translation: translation)
         let beersImagesRepo = BeersImagesFetcher.init()
         
         // VIPER
         let view = BeersViewController.init()
-        let errorManager = DefaultErrorManager.init(rootView: view)
+        let errorAlerts = DefaultErrorAlert.init(rootView: view)
+        
         let interactor = BeersInteractor(beersRepo: beersRepo)
         let beerDetailsRouter = BeerDetailsRouter.init()
         let router = BeersRouter(beerDetailsRouter: beerDetailsRouter,
                                  beersViewController: view,
-                                 errorManager: errorManager)
+                                 errorAlerts: errorAlerts)
         let presenter = BeersPresenter(view: view,
                                        interactor: interactor,
                                        router: router)

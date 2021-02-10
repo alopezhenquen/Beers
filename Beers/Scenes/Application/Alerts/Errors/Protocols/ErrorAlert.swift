@@ -1,6 +1,6 @@
 
 import Foundation
 
-protocol ErrorManager {
+protocol ErrorAlert {
     func showError(with error: Error)
 }
