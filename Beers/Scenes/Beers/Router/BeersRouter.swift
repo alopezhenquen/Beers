@@ -3,18 +3,19 @@
 import UIKit
 
 class BeersRouter {
+    
     //MARK: Properties
     var beerDetailsRouter: BeerDetailsRouter
     var beersViewController: BeersViewController
-    var errorManager: ErrorManager
+    var errorAlerts: ErrorAlert
     
     //MARK: Methods
     init (beerDetailsRouter: BeerDetailsRouter,
           beersViewController: BeersViewController,
-          errorManager: ErrorManager){
+          errorAlerts: ErrorAlert){
         self.beerDetailsRouter = beerDetailsRouter
         self.beersViewController = beersViewController
-        self.errorManager = errorManager
+        self.errorAlerts = errorAlerts
     }
 }
 
@@ -27,6 +28,6 @@ extension BeersRouter: PresenterToBeersRouterProtocol {
     }
     
     func showError(with error: Error) {
-        errorManager.showError(with: error)
+        errorAlerts.showError(with: error)
     }
 }

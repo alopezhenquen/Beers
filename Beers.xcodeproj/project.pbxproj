@@ -59,8 +59,8 @@
 		518185E625CCB45C00DCCA27 /* BeerDetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 518185DE25CCB45B00DCCA27 /* BeerDetailsPresenter.swift */; };
 		518185E725CCB45C00DCCA27 /* BeerDetailsBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 518185E025CCB45B00DCCA27 /* BeerDetailsBuilder.swift */; };
 		518185E825CCB45C00DCCA27 /* BeerDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 518185E225CCB45C00DCCA27 /* BeerDetailsViewController.swift */; };
-		51E2CF3625D0232E00AD79D8 /* ErrorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E2CF3525D0232E00AD79D8 /* ErrorManager.swift */; };
-		51E2CF4025D0253400AD79D8 /* DefaultErrorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E2CF3F25D0253400AD79D8 /* DefaultErrorManager.swift */; };
+		51E2CF3625D0232E00AD79D8 /* ErrorAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E2CF3525D0232E00AD79D8 /* ErrorAlert.swift */; };
+		51E2CF4025D0253400AD79D8 /* DefaultErrorAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E2CF3F25D0253400AD79D8 /* DefaultErrorAlert.swift */; };
 		780170FFE8EFDA48D4EA5FC5 /* Pods_Beers_BeersUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D464F9A4348DD2D0A58605C /* Pods_Beers_BeersUITests.framework */; };
 		96A7AA978D5BC809E86FF858 /* Pods_BeersTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE3C0DC91C953D2163A087BF /* Pods_BeersTests.framework */; };
 /* End PBXBuildFile section */
@@ -143,8 +143,8 @@
 		518185DE25CCB45B00DCCA27 /* BeerDetailsPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeerDetailsPresenter.swift; sourceTree = "<group>"; };
 		518185E025CCB45B00DCCA27 /* BeerDetailsBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeerDetailsBuilder.swift; sourceTree = "<group>"; };
 		518185E225CCB45C00DCCA27 /* BeerDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeerDetailsViewController.swift; sourceTree = "<group>"; };
-		51E2CF3525D0232E00AD79D8 /* ErrorManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorManager.swift; sourceTree = "<group>"; };
-		51E2CF3F25D0253400AD79D8 /* DefaultErrorManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultErrorManager.swift; sourceTree = "<group>"; };
+		51E2CF3525D0232E00AD79D8 /* ErrorAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorAlert.swift; sourceTree = "<group>"; };
+		51E2CF3F25D0253400AD79D8 /* DefaultErrorAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultErrorAlert.swift; sourceTree = "<group>"; };
 		7D464F9A4348DD2D0A58605C /* Pods_Beers_BeersUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Beers_BeersUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C25FB4E2C66A69BCE798DAF /* Pods_Beers.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Beers.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7858722A8AD6D0E8B56BC59 /* Pods-Beers-BeersUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Beers-BeersUITests.debug.xcconfig"; path = "Target Support Files/Pods-Beers-BeersUITests/Pods-Beers-BeersUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -230,8 +230,9 @@
 		5110834D25CBFC25003D1D13 /* Beers */ = {
 			isa = PBXGroup;
 			children = (
-				5110838325CBFCE0003D1D13 /* Domain */,
 				5110838525CBFCEE003D1D13 /* Resources */,
+				5110838325CBFCE0003D1D13 /* Domain */,
+				5110840425CC0978003D1D13 /* PunkAPI */,
 				5110838425CBFCE8003D1D13 /* Data */,
 				5110838225CBFCD7003D1D13 /* Scenes */,
 				5110838125CBFCCA003D1D13 /* Application */,
@@ -281,6 +282,7 @@
 			children = (
 				5110838625CBFD1A003D1D13 /* Entities */,
 				5110838825CBFD2C003D1D13 /* Repositories */,
+				5110843E25CC15DE003D1D13 /* Translation */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -288,7 +290,6 @@
 		5110838425CBFCE8003D1D13 /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				5110843E25CC15DE003D1D13 /* Translation */,
 				511083DA25CC0298003D1D13 /* Networking */,
 			);
 			path = Data;
@@ -418,8 +419,6 @@
 			children = (
 				511083FE25CC0905003D1D13 /* Fetchers */,
 				511083DB25CC02A2003D1D13 /* DTOs */,
-				5110840425CC0978003D1D13 /* PunkAPI */,
-				5110840625CC0978003D1D13 /* Alamofire */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -454,6 +453,7 @@
 		5110840425CC0978003D1D13 /* PunkAPI */ = {
 			isa = PBXGroup;
 			children = (
+				5110840625CC0978003D1D13 /* Alamofire */,
 				5110840525CC0978003D1D13 /* PunkAPI.swift */,
 			);
 			path = PunkAPI;
@@ -541,7 +541,7 @@
 		511BB1D925CDAAE5003A42AE /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
-				51E2CF3525D0232E00AD79D8 /* ErrorManager.swift */,
+				51E2CF3525D0232E00AD79D8 /* ErrorAlert.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -627,7 +627,7 @@
 		51E2CF5025D032F200AD79D8 /* DefaultError */ = {
 			isa = PBXGroup;
 			children = (
-				51E2CF3F25D0253400AD79D8 /* DefaultErrorManager.swift */,
+				51E2CF3F25D0253400AD79D8 /* DefaultErrorAlert.swift */,
 				511BB1D825CDAACD003A42AE /* View */,
 			);
 			path = DefaultError;
@@ -903,7 +903,7 @@
 				5110840C25CC0978003D1D13 /* PunkAPI.swift in Sources */,
 				518185E525CCB45C00DCCA27 /* BeerDetailsRouter.swift in Sources */,
 				518185BE25CC8C2100DCCA27 /* DefaultDecoder.swift in Sources */,
-				51E2CF4025D0253400AD79D8 /* DefaultErrorManager.swift in Sources */,
+				51E2CF4025D0253400AD79D8 /* DefaultErrorAlert.swift in Sources */,
 				511083F025CC02B0003D1D13 /* BeerDTO.swift in Sources */,
 				511083B725CBFE0F003D1D13 /* BeersInteractor.swift in Sources */,
 				511083E925CC02B0003D1D13 /* FermentationDTO.swift in Sources */,
@@ -919,7 +919,7 @@
 				5110847B25CC27BE003D1D13 /* LoadingView.swift in Sources */,
 				518185E425CCB45C00DCCA27 /* BeerDetailsInteractor.swift in Sources */,
 				511083B925CBFE0F003D1D13 /* BeersRouter.swift in Sources */,
-				51E2CF3625D0232E00AD79D8 /* ErrorManager.swift in Sources */,
+				51E2CF3625D0232E00AD79D8 /* ErrorAlert.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

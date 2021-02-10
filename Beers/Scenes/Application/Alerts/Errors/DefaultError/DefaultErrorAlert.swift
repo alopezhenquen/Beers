@@ -1,7 +1,7 @@
 
 import UIKit
 
-class DefaultErrorManager : ErrorManager {
+class DefaultErrorAlert : ErrorAlert {
     fileprivate var rootView: UIViewController
     
     init(rootView: UIViewController) {

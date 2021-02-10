@@ -4,7 +4,7 @@ import UIKit
 
 class BeerDetailsRouter {
     //MARK: Properties
-    var errorManager: ErrorManager?
+    var errorAlerts: ErrorAlert?
     
     //MARK: Methods
     func navigateToBeerDetails(from viewController: UIViewController,
@@ -17,6 +17,6 @@ class BeerDetailsRouter {
 
 extension BeerDetailsRouter: PresenterToBeerDetailsRouterProtocol {
     func showError(with error: Error) {
-        errorManager?.showError(with: error)
+        errorAlerts?.showError(with: error)
     }
 }
